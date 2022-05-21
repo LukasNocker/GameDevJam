@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Companion
+  - Collectible
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 211358817
+    locked: 0
+  - name: Midground
+    uniqueID: 3265330133
+    locked: 0
+  - name: Objects
+    uniqueID: 644521661
+    locked: 0
+  - name: Characters
+    uniqueID: 3577145661
+    locked: 0
+  - name: UI
+    uniqueID: 3056272183
     locked: 0
