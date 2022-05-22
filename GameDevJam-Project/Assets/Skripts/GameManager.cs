@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     //References
     public Player player;
 
-    //publick weapon weapon...
+    //public weapon weapon...
     public FloatingTextManager floatingTextManager;
 
     //Logic
@@ -85,4 +85,10 @@ public class GameManager : MonoBehaviour
         ++souls;
 
     }
+    public void PickupSoul()
+      {
+          ++souls;
+      }
+        
+    
 }

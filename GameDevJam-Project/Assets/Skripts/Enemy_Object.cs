@@ -50,7 +50,9 @@ public class Enemy_Object : MonoBehaviour
             capsuleCollider = GetComponent<CapsuleCollider2D>();
             playerTransform = GameObject.Find("Player").transform;
             startingPosition = transform.position;
+            if (this.gameObject.transform.childCount > 0){
             hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
+            }
     }
 
     //Enemy Moving
