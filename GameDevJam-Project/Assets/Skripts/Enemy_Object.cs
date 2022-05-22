@@ -155,6 +155,7 @@ public class Enemy_Object : MonoBehaviour
             pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
 
             GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.up * 25, 0.5f);
+            Debug.Log("new hitpoints:" + hitpoint + " left");
 
             if (hitpoint <= 0)
             {
