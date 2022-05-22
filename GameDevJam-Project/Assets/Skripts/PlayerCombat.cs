@@ -7,9 +7,11 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
-
+   
     public Collider2D enemy;
+
     
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
