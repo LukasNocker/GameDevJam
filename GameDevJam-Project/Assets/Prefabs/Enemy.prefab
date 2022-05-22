@@ -118,6 +118,7 @@ MonoBehaviour:
   maxHitpoint: 10
   pushRecoverySpeed: 0.2
   soulsValue: 1
+  SoulCollectable: {fileID: 0}
   triggerLength: 10
   chaseLength: 15
   filter:
