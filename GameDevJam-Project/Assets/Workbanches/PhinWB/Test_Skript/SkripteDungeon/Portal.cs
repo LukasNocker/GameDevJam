@@ -10,6 +10,7 @@ public class Portal : Collidable
     {
         if (coll.name == "Player")
         {
+            //hier muss noch eine if funktion ein die mit der Anzahl der Seelen zu tun hat (mindestanzahl)
 
             //teleport the player
             GameManager.instance.SaveState();

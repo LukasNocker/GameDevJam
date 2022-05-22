@@ -118,8 +118,8 @@ MonoBehaviour:
   maxHitpoint: 10
   pushRecoverySpeed: 0.2
   soulsValue: 1
-  triggerLength: 1
-  chaseLength: 5
+  triggerLength: 10
+  chaseLength: 15
   filter:
     useTriggers: 0
     useLayerMask: 0

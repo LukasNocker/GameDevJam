@@ -24,8 +24,8 @@ public class Enemy_Object : MonoBehaviour
     public int soulsValue = 1;
 
     //Logic
-    public float triggerLength = 1;
-    public float chaseLength = 5;
+    public float triggerLength = 10;
+    public float chaseLength = 15;
     private bool chasing;
     private bool collidingWithPlayer;
     private Transform playerTransform;
@@ -43,7 +43,7 @@ public class Enemy_Object : MonoBehaviour
     protected virtual void Start()
     {
             capsuleCollider = GetComponent<CapsuleCollider2D>();
-            playerTransform = GameManager.instance.player.transform;
+            playerTransform = GameObject.Find("Player").transform;
             startingPosition = transform.position;
             hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
     }
@@ -94,9 +94,9 @@ public class Enemy_Object : MonoBehaviour
     private void FixedUpdate()
     {
         //is the player in range?
-        if (Vector3.Distance(CharakterControllerTransform.position, startingPosition) < chaseLength)
+        if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
-            if (Vector3.Distance(CharakterControllerTransform.position, startingPosition) < triggerLength)
+            if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
 
                 chasing = true;
 
@@ -105,7 +105,7 @@ public class Enemy_Object : MonoBehaviour
             {
                 if (!collidingWithPlayer)
                 {
-                    UpdateMotor((CharakterControllerTransform.position - transform.position).normalized);
+                    UpdateMotor((playerTransform.position - transform.position).normalized);
                 }
             }
             else
@@ -128,7 +128,7 @@ public class Enemy_Object : MonoBehaviour
                 continue;
 
 
-            if (hits[i].tag == "Player" && hits[i].name == "Player")
+            if (hits[i].tag == "Fighter" && hits[i].name == "Player")
             {
                 collidingWithPlayer = true;
             }
