@@ -9,7 +9,7 @@ private BoxCollider2D boxCollider;
 private Collider2D[] hits = new Collider2D[10];
 private float lastInteraction;
 private float cooldownNpc = 2.0f;
-private bool collided = false;
+
 
     protected virtual void Start()
 {

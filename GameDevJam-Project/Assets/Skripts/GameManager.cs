@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -75,5 +76,13 @@ public class GameManager : MonoBehaviour
         //change the weapon Level 
 
         Debug.Log("LoadState");
+    }
+
+    //Souls collecting [not working yet]
+
+    public void UpdateSoulDisplayUI()
+    {
+        ++souls;
+
     }
 }

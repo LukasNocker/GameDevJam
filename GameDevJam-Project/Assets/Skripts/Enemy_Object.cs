@@ -22,7 +22,8 @@ public class Enemy_Object : MonoBehaviour
 
     //Souls
     public int soulsValue = 1;
-
+    public GameObject SoulCollectable;
+    
     //Logic
     public float triggerLength = 10;
     public float chaseLength = 15;
@@ -35,6 +36,10 @@ public class Enemy_Object : MonoBehaviour
     public ContactFilter2D filter;
     private CapsuleCollider2D hitbox;
     private Collider2D[] hits = new Collider2D[10];
+
+    // Damage
+    public int damage = 1;
+    public float pushForce = 5;
 
     //push
     protected Vector3 pushDirection;
@@ -157,10 +162,31 @@ public class Enemy_Object : MonoBehaviour
         }
     }
 
+    //Deal Damage
+    protected void OnCollide(Collider2D coll)
+    {
+        if (coll.tag == "Player")
+        {
+
+            if (coll.name == "Player")
+            {
+                //Create a new Damage Object, then we'll send it to the fighter we've hit
+                Damage dmg = new Damage
+                {
+                    damageAmount = damage,
+                    origin = transform.position,
+                    pushForce = pushForce,
+                };
+
+                coll.SendMessage("ReceiveDamage", dmg);
+
+            }
+        }
+    }
+
     protected virtual void Death()
     {
         Destroy(gameObject);
-        GameManager.instance.souls += soulsValue;
-        GameManager.instance.ShowText("+" + soulsValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 50, 3.0f);
+        Instantiate(SoulCollectable, transform.position, Quaternion.identity);
     }
 }
