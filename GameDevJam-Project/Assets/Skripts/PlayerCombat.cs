@@ -7,8 +7,8 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
-   
-    public Collider2D enemy;
+
+    public int attackDamage = 4;
 
     
 
@@ -31,8 +31,8 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit" + enemy.name);
-            HealthSystem healthSystem =  enemy.GetComponent<HealthSystem>();
-            healthSystem.Damage(1);
+
+            enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
    }
 
