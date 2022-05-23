@@ -27,6 +27,7 @@ public class HealthSystem :  MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
         {
             Instantiate(SoulCollectable, transform.position, transform.rotation);
+            
         }
         }
     }
