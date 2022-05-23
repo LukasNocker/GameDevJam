@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -717821635
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 400845243, guid: 53f0322619e498449b166212bb91b336, type: 3}
   m_Color: {r: 0.5943396, g: 0.26633143, b: 0.26633143, a: 1}
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba2b8e705702fc4cbc3bcabaa737f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 10
-  maxHitpoint: 10
+  currentHealth: 0
+  maxHealth: 10
   pushRecoverySpeed: 0.2
   soulsValue: 1
   SoulCollectable: {fileID: 0}

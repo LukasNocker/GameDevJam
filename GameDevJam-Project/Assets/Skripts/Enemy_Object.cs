@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy_Object : MonoBehaviour
 {
     //Public Fields
-    public int hitpoint = 10;
-    public int maxHitpoint = 10;
+    public int currentHealth;
+    public int maxHealth = 10;
     public float pushRecoverySpeed = 0.2f;
 
     //Immunity
@@ -50,10 +50,13 @@ public class Enemy_Object : MonoBehaviour
             capsuleCollider = GetComponent<CapsuleCollider2D>();
             playerTransform = GameObject.Find("Player").transform;
             startingPosition = transform.position;
-            if (this.gameObject.transform.childCount > 0){
+            currentHealth = maxHealth;
+        if (this.gameObject.transform.childCount > 0)
+        {
             hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
-            }
-    }
+            
+        }
+     }
 
     //Enemy Moving
 
@@ -151,15 +154,15 @@ public class Enemy_Object : MonoBehaviour
         if (Time.time - lastImmune > immuneTime)
         {
             lastImmune = Time.time;
-            hitpoint -= dmg.damageAmount;
+            currentHealth -= damage;
             pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
 
             GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.up * 25, 0.5f);
-            Debug.Log("new hitpoints:" + hitpoint + " left");
+            Debug.Log("new hitpoints:" + currentHealth + " left");
 
-            if (hitpoint <= 0)
+            if (currentHealth <= 0)
             {
-                hitpoint = 0;
+             
                 Death();
             }
         }
@@ -189,7 +192,8 @@ public class Enemy_Object : MonoBehaviour
 
     protected virtual void Death()
     {
-        Destroy(gameObject);
+        Destroy(transform.root.gameObject);
         Instantiate(SoulCollectable, transform.position, Quaternion.identity);
+        Debug.Log("enemy died");
     }
 }
