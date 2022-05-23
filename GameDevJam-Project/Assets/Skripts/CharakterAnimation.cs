@@ -9,9 +9,11 @@ public class CharakterAnimation : MonoBehaviour
     public string[] staticDirections = { "StaticN", "StaticNW", "StaticW", "StaticSW", "StaticS", "StaticSE", "StaticE", "StaticNE" };
     public string[] runDirections = { "RunN", "RunNW", "RunW", "RunSW", "RunS", "RunSE", "RunE", "RunNE" };
 
-    private float stepCount;
+    public float playerDir;
+    private bool attack;
 
-    
+    public Transform attackPoint;
+    public Vector2 currentPos;
 
     int lastDirection;
 
@@ -20,18 +22,70 @@ public class CharakterAnimation : MonoBehaviour
         anim = GetComponent<Animator>();
 
         float result1 = Vector2.SignedAngle(Vector2.up, Vector2.right);
-        Debug.Log("R1" + result1);
 
-        stepCount = Mathf.FloorToInt(stepCount);
+        attack = false;
+
+       
+        
         
     }
 
     private void Update()
     {
-        if (stepCount == 0 && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Debug.Log("attacked N");
+        currentPos = transform.position;
+
+        
+        
+           if(lastDirection == 0)
+           {
+               Debug.Log("Attack N");
+                attackPoint.position = currentPos + new Vector2(0, 1);
+           }
+
+           if (lastDirection == 1)
+           {
+               Debug.Log("Attack NW");
+            attackPoint.position = currentPos + new Vector2(-1, 1);
         }
+
+           if (lastDirection == 2)
+           {
+               Debug.Log("Attack W");
+            attackPoint.position = currentPos + new Vector2(-1, 0);
+        }
+
+           if (lastDirection == 3)
+           {
+               Debug.Log("Attack SW");
+            attackPoint.position = currentPos + new Vector2(-1, -1);
+        }
+
+           if (lastDirection == 4)
+           {
+               Debug.Log("Attack S");
+            attackPoint.position = currentPos + new Vector2(0, -1);
+        }
+
+           if (lastDirection == 5)
+           {
+               Debug.Log("Attack SE");
+            attackPoint.position = currentPos + new Vector2(1, -1);
+        }
+
+           if (lastDirection == 6)
+           {
+               Debug.Log("Attack E");
+            attackPoint.position = currentPos + new Vector2(1, 0);
+        }
+
+           if (lastDirection == 7)
+           {
+               Debug.Log("Attack NE");
+            attackPoint.position = currentPos + new Vector2(1, 1);
+        }
+
+
+       
     }
     
     public void SetDirection (Vector2 _direction)
@@ -73,7 +127,6 @@ public class CharakterAnimation : MonoBehaviour
 
         float stepCount = angle / step;
         
-      
         
         return Mathf.FloorToInt(stepCount);
     
