@@ -9,6 +9,7 @@ public class FloatingTextManager : MonoBehaviour
 {
     public GameObject textContainer;
     public GameObject textPrefab;
+    public GameObject dialogBox;
 
     private List<FloatingText> floatingTexts = new List<FloatingText>();
 
@@ -17,6 +18,8 @@ public class FloatingTextManager : MonoBehaviour
         foreach (FloatingText txt in floatingTexts)
             txt.UpdateFloatingText();
     }
+
+
 
     public void Show(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
@@ -30,6 +33,16 @@ public class FloatingTextManager : MonoBehaviour
     floatingText.duration = duration;
 
         floatingText.Show();
+
+        if (dialogBox.activeInHierarchy)
+        {
+            dialogBox.SetActive(false);
+
+        }
+        else
+        {
+            dialogBox.SetActive(true);
+        }
     }
 
     private FloatingText GetFloatingText()
@@ -47,5 +60,7 @@ public class FloatingTextManager : MonoBehaviour
         }
         return txt;
     }
+
+    
 
 }

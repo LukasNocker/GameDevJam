@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
-{ 
+{
+public string dialog;
+public Text dialogText;
+public GameObject dialogBox;
 public ContactFilter2D filter;
 private BoxCollider2D boxCollider;
 private Collider2D[] hits = new Collider2D[10];
 private float lastInteraction;
 private float cooldownNpc = 2.0f;
+
 
 
     protected virtual void Start()
@@ -28,7 +33,7 @@ protected virtual void Update()
 
         OnCollide(hits[i]);
 
-        //teh array is not cleaned up, so we do it ourself
+        //the array is not cleaned up, so we do it ourself
         hits[i] = null;
     }
 }
@@ -39,7 +44,17 @@ protected virtual void Update()
             if (Time.time - lastInteraction > cooldownNpc)
             {
                 lastInteraction = Time.time;
-                GameManager.instance.ShowText("Hey! My Name is Avery. Who are you?", 15, Color.white, transform.position, Vector3.up * 20, 3.0f);
+                if (dialogBox.activeInHierarchy)
+                {
+                    dialogBox.SetActive(false);
+
+                }
+                else
+                {
+                    dialogBox.SetActive(true);
+                    dialogText.text = dialog;
+                }
+                
 
             }   
         }
