@@ -184,6 +184,61 @@ PolygonCollider2D:
       - {x: -5.9978623, y: -3.373138}
       - {x: 5.9983892, y: -3.3695624}
       - {x: 6.0011077, y: 3.3707654}
+--- !u!1 &720155215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6770054735862474767, guid: 76d96980ed89de24085f774acf93c864, type: 3}
+  m_PrefabInstance: {fileID: 1275156089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &720155221
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720155215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 444edd094a49b114992e571417acfefc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &720155222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720155215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f356d95880a7a4b91f79446e67ef0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staticDirections:
+  - E_StaticN
+  - E_StaticNW
+  - E_StaticW
+  - E_StaticSW
+  - E_StaticS
+  - E_StaticSE
+  - E_StaticE
+  - E_StaticNE
+  runDirections:
+  - E_RunN
+  - E_RunNW
+  - E_RunW
+  - E_RunSW
+  - E_RunS
+  - E_RunSE
+  - E_RunE
+  - E_RunNE
 --- !u!1 &755138946
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +996,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2867925, y: 1}
+    m_SensorSize: {x: 2.3267858, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

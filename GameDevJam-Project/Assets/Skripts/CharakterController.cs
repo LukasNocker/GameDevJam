@@ -48,7 +48,7 @@ public class CharakterController : MonoBehaviour
         Vector2 direction = new(horizontalInput, verticalInput);
 
 
-        //FindObjectOfType<CharakterAnimation>().SetDirection(direction);
+        
         FindObjectOfType<CharakterAnimation>().SetDirection(direction);
     }
   

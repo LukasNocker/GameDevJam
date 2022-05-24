@@ -12,7 +12,7 @@ public class CharakterAnimation : MonoBehaviour
     public string [] attackDirections = { "AttackN", "AttackNW", "AttackW", "AttackSW", "AttackS", "AttackSE", "AttackE", "AttackNE" };
     
     public float playerDir;
-    public bool attacking;
+    
 
     public Transform attackPoint;
     public Vector2 currentPos;
@@ -25,7 +25,7 @@ public class CharakterAnimation : MonoBehaviour
     {
         anim = GetComponent<Animator>();
 
-        attacking = false;
+        
     }
 
     private void Update()

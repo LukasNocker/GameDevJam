@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy_Object : MonoBehaviour
 {
+   
+
     //Public Fields
     public int currentHealth;
     public int experience = 10;
@@ -57,7 +59,9 @@ public class Enemy_Object : MonoBehaviour
             hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
             
         }
-     }
+    }
+
+    
 
     //Enemy Moving
 
@@ -99,11 +103,16 @@ public class Enemy_Object : MonoBehaviour
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
 
         }
+
+        
+        
     }
 
     //Chasing Mechanic
     private void FixedUpdate()
     {
+       
+
         //is the player in range?
         if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
@@ -148,6 +157,8 @@ public class Enemy_Object : MonoBehaviour
             hits[i] = null;
         }
 
+        Vector2 movedir = new(moveDelta.x, moveDelta.y);
+        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
     }
     // All Enemies can receive damage / die
     // protected virtual void ReceiveDamage(Damage dmg)
