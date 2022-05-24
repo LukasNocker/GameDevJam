@@ -10,10 +10,12 @@ public class CharakterAnimation : MonoBehaviour
     public string[] runDirections = { "RunN", "RunNW", "RunW", "RunSW", "RunS", "RunSE", "RunE", "RunNE" };
 
     public float playerDir;
-    private bool attack;
+
 
     public Transform attackPoint;
     public Vector2 currentPos;
+
+    public Transform tattackPoint;
 
     int lastDirection;
 
@@ -21,12 +23,6 @@ public class CharakterAnimation : MonoBehaviour
     {
         anim = GetComponent<Animator>();
 
-        float result1 = Vector2.SignedAngle(Vector2.up, Vector2.right);
-
-        attack = false;
-
-       
-        
         
     }
 
@@ -40,49 +36,57 @@ public class CharakterAnimation : MonoBehaviour
            {
                Debug.Log("Attack N");
                 attackPoint.position = currentPos + new Vector2(0, 1);
+                tattackPoint.position = currentPos + new Vector2(0, 1);
            }
 
            if (lastDirection == 1)
            {
                Debug.Log("Attack NW");
-            attackPoint.position = currentPos + new Vector2(-1, 1);
-        }
+               attackPoint.position = currentPos + new Vector2(-1, 1);
+               tattackPoint.position = currentPos + new Vector2(-1, 1);
+           }
 
            if (lastDirection == 2)
            {
                Debug.Log("Attack W");
-            attackPoint.position = currentPos + new Vector2(-1, 0);
-        }
+               attackPoint.position = currentPos + new Vector2(-1, 0);
+               tattackPoint.position = currentPos + new Vector2(-1, 0);
+           }
 
            if (lastDirection == 3)
            {
                Debug.Log("Attack SW");
-            attackPoint.position = currentPos + new Vector2(-1, -1);
-        }
+               attackPoint.position = currentPos + new Vector2(-1, -1);
+               attackPoint.position = currentPos + new Vector2(-1, -1);
+           }
 
            if (lastDirection == 4)
            {
                Debug.Log("Attack S");
-            attackPoint.position = currentPos + new Vector2(0, -1);
-        }
+               attackPoint.position = currentPos + new Vector2(0, -1);
+               tattackPoint.position = currentPos + new Vector2(0, -1);
+           }
 
            if (lastDirection == 5)
            {
                Debug.Log("Attack SE");
-            attackPoint.position = currentPos + new Vector2(1, -1);
-        }
-
+               attackPoint.position = currentPos + new Vector2(1, -1);
+               tattackPoint.position = currentPos + new Vector2(1, -1);
+           }
+ 
            if (lastDirection == 6)
            {
                Debug.Log("Attack E");
-            attackPoint.position = currentPos + new Vector2(1, 0);
-        }
+               attackPoint.position = currentPos + new Vector2(1, 0);
+               tattackPoint.position = currentPos + new Vector2(1, 0);
+           }
 
            if (lastDirection == 7)
            {
                Debug.Log("Attack NE");
-            attackPoint.position = currentPos + new Vector2(1, 1);
-        }
+               attackPoint.position = currentPos + new Vector2(1, 1);
+               tattackPoint.position = currentPos + new Vector2(1, 1);
+           }
 
 
        

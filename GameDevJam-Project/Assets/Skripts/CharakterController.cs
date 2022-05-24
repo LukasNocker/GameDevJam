@@ -32,6 +32,7 @@ public class CharakterController : MonoBehaviour
         Vector2 direction = new Vector2(moveH, moveV);
 
         //FindObjectOfType<CharakterAnimation>().SetDirection(direction);
+        FindObjectOfType<CharakterAnimation>().SetDirection(direction);
     }
   
     void FacingDirections()
