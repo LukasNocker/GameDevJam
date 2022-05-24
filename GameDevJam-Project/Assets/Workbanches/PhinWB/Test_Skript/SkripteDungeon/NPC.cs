@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
 public string dialog;
 public Text dialogText;
 public GameObject dialogBox;
+public GameObject npcImage;
 public ContactFilter2D filter;
 private BoxCollider2D boxCollider;
 private Collider2D[] hits = new Collider2D[10];
