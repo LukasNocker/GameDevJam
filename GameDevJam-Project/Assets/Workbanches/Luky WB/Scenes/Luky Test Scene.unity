@@ -238,7 +238,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -570,6 +570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 397208664, guid: 76d96980ed89de24085f774acf93c864, type: 3}
+      propertyPath: pushForce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6377140293605281837, guid: 76d96980ed89de24085f774acf93c864, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -797,7 +801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988169005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8678, y: 2.4514, z: 0}
+  m_LocalPosition: {x: 1.98, y: 2.61, z: 0}
   m_LocalScale: {x: 5.14294, y: 4.9436326, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -930,14 +934,14 @@ MonoBehaviour:
   m_Follow: {fileID: 1864933838}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.165725, y: 1}
+    m_SensorSize: {x: 2.2867925, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1026,6 +1030,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 797531542095521239, guid: 42ecc4a1f27f67b45a378ded391bb54b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146054067617920280, guid: 42ecc4a1f27f67b45a378ded391bb54b, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146054068514923934, guid: 42ecc4a1f27f67b45a378ded391bb54b, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312734171709316000, guid: 42ecc4a1f27f67b45a378ded391bb54b, type: 3}

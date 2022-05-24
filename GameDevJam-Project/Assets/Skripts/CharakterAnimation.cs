@@ -35,66 +35,101 @@ public class CharakterAnimation : MonoBehaviour
       
 
 
-        if (lastDirection == 0)
-        {
-               Debug.Log("Attack N");
+           if (lastDirection == 0)
+           {
+               
                 attackPoint.position = currentPos + new Vector2(0, 1);
                 tattackPoint.position = currentPos + new Vector2(0, 1);
            
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
                 anim.Play("AttackN",1);
-            }
+               }
 
-        }
+           }
 
            if (lastDirection == 1)
            {
-               Debug.Log("Attack NW");
+               
                attackPoint.position = currentPos + new Vector2(-1, 1);
                tattackPoint.position = currentPos + new Vector2(-1, 1);
+
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
+                anim.Play("AttackNW", 1);
+               }
            }
 
            if (lastDirection == 2)
            {
-               Debug.Log("Attack W");
+               
                attackPoint.position = currentPos + new Vector2(-1, 0);
                tattackPoint.position = currentPos + new Vector2(-1, 0);
+
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
+                anim.Play("AttackW", 1);
+               }
            }
 
            if (lastDirection == 3)
            {
-               Debug.Log("Attack SW");
+               
                attackPoint.position = currentPos + new Vector2(-1, -1);
                tattackPoint.position = currentPos + new Vector2(-1, -1);
+
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
+                anim.Play("AttackSW", 1);
+               }
            }
 
            if (lastDirection == 4)
            {
-               Debug.Log("Attack S");
+               
                attackPoint.position = currentPos + new Vector2(0, -1);
                tattackPoint.position = currentPos + new Vector2(0, -1);
+              
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
+                anim.Play("AttackS", 1);
+               }
            }
 
            if (lastDirection == 5)
            {
-               Debug.Log("Attack SE");
+               
                attackPoint.position = currentPos + new Vector2(1, -1);
                tattackPoint.position = currentPos + new Vector2(1, -1);
+
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
+                anim.Play("AttackSE", 1);
+               }
            }
  
            if (lastDirection == 6)
            {
-               Debug.Log("Attack E");
+               
                attackPoint.position = currentPos + new Vector2(1, 0);
                tattackPoint.position = currentPos + new Vector2(1, 0);
+
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
+                anim.Play("AttackE", 1);
+               }
            }
 
            if (lastDirection == 7)
            {
-               Debug.Log("Attack NE");
+              
                attackPoint.position = currentPos + new Vector2(1, 1);
                tattackPoint.position = currentPos + new Vector2(1, 1);
+
+               if (Input.GetKeyDown(KeyCode.Mouse0))
+               {
+                anim.Play("AttackNE", 1);
+               }
            }
 
 
