@@ -5,12 +5,14 @@ using UnityEngine;
 public class CharakterAnimation : MonoBehaviour
 {
     private Animator anim;
+    
 
     public string[] staticDirections = { "StaticN", "StaticNW", "StaticW", "StaticSW", "StaticS", "StaticSE", "StaticE", "StaticNE" };
     public string[] runDirections = { "RunN", "RunNW", "RunW", "RunSW", "RunS", "RunSE", "RunE", "RunNE" };
-
+    public string [] attackDirections = { "AttackN", "AttackNW", "AttackW", "AttackSW", "AttackS", "AttackSE", "AttackE", "AttackNE" };
+    
     public float playerDir;
-
+    public bool attacking;
 
     public Transform attackPoint;
     public Vector2 currentPos;
@@ -23,21 +25,28 @@ public class CharakterAnimation : MonoBehaviour
     {
         anim = GetComponent<Animator>();
 
-        
+        attacking = false;
     }
 
     private void Update()
     {
         currentPos = transform.position;
 
-        
-        
-           if(lastDirection == 0)
-           {
+      
+
+
+        if (lastDirection == 0)
+        {
                Debug.Log("Attack N");
                 attackPoint.position = currentPos + new Vector2(0, 1);
                 tattackPoint.position = currentPos + new Vector2(0, 1);
-           }
+           
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                anim.Play("AttackN",1);
+            }
+
+        }
 
            if (lastDirection == 1)
            {
@@ -95,7 +104,8 @@ public class CharakterAnimation : MonoBehaviour
     public void SetDirection (Vector2 _direction)
     {
         string[] directonArray = null;
-       
+        
+        
         
         if(_direction.magnitude < 0.01)
         {

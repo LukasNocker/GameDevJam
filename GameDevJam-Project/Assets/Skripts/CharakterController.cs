@@ -9,7 +9,7 @@ public class CharakterController : MonoBehaviour
     
    [SerializeField] private float moveSpeed = 1.0f;
 
-    float charDir;
+    
     
 
     private void Awake()
@@ -37,7 +37,7 @@ public class CharakterController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        Vector2 inputVector = new(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
 
         Vector2 movement = inputVector * moveSpeed;
@@ -45,7 +45,7 @@ public class CharakterController : MonoBehaviour
 
         rb.MovePosition(newPos);
 
-        Vector2 direction = new Vector2(horizontalInput, verticalInput);
+        Vector2 direction = new(horizontalInput, verticalInput);
 
 
         //FindObjectOfType<CharakterAnimation>().SetDirection(direction);
