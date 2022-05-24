@@ -8,8 +8,8 @@ public class CharakterController : MonoBehaviour
    private float moveH, moveV;
    [SerializeField] private float moveSpeed = 1.0f;
 
-
-    public float charDir;
+    float charDir;
+    
 
     private void Awake()
     {
