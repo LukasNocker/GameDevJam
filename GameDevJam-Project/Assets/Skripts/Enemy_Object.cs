@@ -6,6 +6,7 @@ public class Enemy_Object : MonoBehaviour
 {
     //Public Fields
     public int currentHealth;
+    public int experience = 10;
     public int maxHealth = 10;
     public float pushRecoverySpeed = 0.2f;
 
@@ -149,24 +150,24 @@ public class Enemy_Object : MonoBehaviour
 
     }
     // All Enemies can receive damage / die
-    protected virtual void ReceiveDamage(Damage dmg)
-    {
-        if (Time.time - lastImmune > immuneTime)
-        {
-            lastImmune = Time.time;
-            currentHealth -= damage;
-            pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
+    // protected virtual void ReceiveDamage(Damage dmg)
+    // {
+    //     if (Time.time - lastImmune > immuneTime)
+    //     {
+    //         lastImmune = Time.time;
+    //         currentHealth -= damage;
+    //         pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
 
-            GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.up * 25, 0.5f);
-            Debug.Log("new hitpoints:" + currentHealth + " left");
+    //         GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.up * 25, 0.5f);
+    //         Debug.Log("new hitpoints:" + currentHealth + " left");
 
-            if (currentHealth <= 0)
-            {
+    //         if (currentHealth <= 0)
+    //         {
              
-                Death();
-            }
-        }
-    }
+    //             Death();
+    //         }
+    //     }
+    // }
 
     //Deal Damage
     protected void OnCollide(Collider2D coll)

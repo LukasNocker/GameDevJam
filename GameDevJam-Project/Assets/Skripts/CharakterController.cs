@@ -31,7 +31,7 @@ public class CharakterController : MonoBehaviour
 
         Vector2 direction = new Vector2(moveH, moveV);
 
-        FindObjectOfType<CharakterAnimation>().SetDirection(direction);
+        //FindObjectOfType<CharakterAnimation>().SetDirection(direction);
     }
   
     void FacingDirections()
@@ -42,7 +42,7 @@ public class CharakterController : MonoBehaviour
             
         }
         
-        if(moveV < 0 && moveH == 0) // Süden
+        if(moveV < 0 && moveH == 0) // Sï¿½den
         {
             charDir = 4;
         }
@@ -62,12 +62,12 @@ public class CharakterController : MonoBehaviour
             charDir = 7;
         }
         
-        if(moveH < 0 && moveV < 0) //SüdWest
+        if(moveH < 0 && moveV < 0) //Sï¿½dWest
         {
             charDir = 3;
         }
         
-        if (moveH > 0 && moveV < 0) // SüdOst
+        if (moveH > 0 && moveV < 0) // Sï¿½dOst
         {
             charDir = 5;
         }
