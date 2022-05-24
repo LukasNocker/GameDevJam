@@ -57,7 +57,7 @@ public class CharakterAnimation : MonoBehaviour
            {
                Debug.Log("Attack SW");
                attackPoint.position = currentPos + new Vector2(-1, -1);
-               attackPoint.position = currentPos + new Vector2(-1, -1);
+               tattackPoint.position = currentPos + new Vector2(-1, -1);
            }
 
            if (lastDirection == 4)
