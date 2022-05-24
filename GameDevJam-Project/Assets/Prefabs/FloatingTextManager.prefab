@@ -60,3 +60,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textContainer: {fileID: 4098094570518481500}
   textPrefab: {fileID: 6322198832039302735, guid: 95f1b83f51fd2ae438d05c8bda736239, type: 3}
+  dialogBox: {fileID: 0}

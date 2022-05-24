@@ -13,6 +13,8 @@ private BoxCollider2D boxCollider;
 private Collider2D[] hits = new Collider2D[10];
 private float lastInteraction;
 private float cooldownNpc = 2.0f;
+public bool playerInRange;
+
 
 
 
@@ -57,6 +59,14 @@ protected virtual void Update()
                 
 
             }   
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+            dialogBox.SetActive(false);
         }
     }
 }
