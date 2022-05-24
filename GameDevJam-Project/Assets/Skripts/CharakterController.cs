@@ -5,11 +5,12 @@ using UnityEngine;
 public class CharakterController : MonoBehaviour
 {
    private Rigidbody2D rb;
-   private float moveH, moveV;
+
+    
    [SerializeField] private float moveSpeed = 1.0f;
 
-
-    public float charDir;
+    float charDir;
+    
 
     private void Awake()
     {
@@ -22,59 +23,34 @@ public class CharakterController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        FacingDirections();
+      
 
-        moveH = Input.GetAxis("Horizontal") * moveSpeed;
-        moveV = Input.GetAxis("Vertical") * moveSpeed;
+        //old Movement
+        //moveH = Input.GetAxis("Horizontal") * moveSpeed;
+        // moveV = Input.GetAxis("Vertical") * moveSpeed;
+        // rb.velocity = new Vector2(moveH, moveV);
+        // Vector2 direction = new Vector2(moveH, moveV);
 
-        rb.velocity = new Vector2(moveH, moveV);
+       // fixed Movement
+        Vector2 currentPos = rb.position;
 
-        Vector2 direction = new Vector2(moveH, moveV);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        inputVector = Vector2.ClampMagnitude(inputVector, 1);
+
+        Vector2 movement = inputVector * moveSpeed;
+        Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
+
+        rb.MovePosition(newPos);
+
+        Vector2 direction = new Vector2(horizontalInput, verticalInput);
+
 
         //FindObjectOfType<CharakterAnimation>().SetDirection(direction);
+        FindObjectOfType<CharakterAnimation>().SetDirection(direction);
     }
   
-    void FacingDirections()
-    {
-        if(moveV > 0 && moveH == 0) //Norden
-        {
-            charDir = 0;
-            
-        }
-        
-        if(moveV < 0 && moveH == 0) // S�den
-        {
-            charDir = 4;
-        }
-        
-        if(moveH > 0 && moveV == 0) // Osten
-        {
-            charDir = 6;
-        }
-        
-        if(moveH < 0 && moveV == 0) // Westen
-        {
-            charDir = 2;
-        }
-        
-        if(moveV > 0 && moveH >0) //NordOst
-        {
-            charDir = 7;
-        }
-        
-        if(moveH < 0 && moveV < 0) //S�dWest
-        {
-            charDir = 3;
-        }
-        
-        if (moveH > 0 && moveV < 0) // S�dOst
-        {
-            charDir = 5;
-        }
-        
-        if ( moveH < 0 && moveV > 0) //Nordwest
-        {
-            charDir = 1;
-        }
-    }
+   
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FloatingText
+public class  FloatingText
 {
     public bool active;
     public GameObject go;

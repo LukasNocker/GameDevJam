@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     //References
     public Player player;
 
-    //public weapon weapon...
+    //public floating text
     public FloatingTextManager floatingTextManager;
 
     //Logic
