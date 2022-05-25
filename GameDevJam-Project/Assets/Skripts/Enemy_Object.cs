@@ -148,7 +148,7 @@ public class Enemy_Object : MonoBehaviour
                 continue;
 
 
-            if (hits[i].tag == "Fighter" && hits[i].name == "Player")
+            if (hits[i].tag == "Player" && hits[i].name == "Player")
             {
                 collidingWithPlayer = true;
             }
