@@ -20,9 +20,10 @@ public bool playerInRange;
 
 
     protected virtual void Start()
-{
-    boxCollider = GetComponent<BoxCollider2D>();
-}
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
+        dialogBox.SetActive(false);
+    }
 
 protected virtual void Update()
 {
