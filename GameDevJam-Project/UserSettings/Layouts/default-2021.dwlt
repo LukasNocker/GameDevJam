@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 273
+  controlID: 55
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 375
+  controlID: 61
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 376
+  controlID: 62
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,8 +296,8 @@ MonoBehaviour:
     y: 0
     width: 648
     height: 826
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -454,22 +454,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art Assets/Enviroment Asets/Interactables
+    - Assets/Prefabs/NPC_Dialog
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art Assets/Enviroment Asets/Interactables
+  - Assets/Prefabs/NPC_Dialog
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\JulyK\Documents\GitHub\GameDevJam\GameDevJam-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 14710000
-    m_LastClickedID: 28948
-    m_ExpandedIDs: 00000000da5f0000de5f0000e05f0000e25f0000e65f0000ee5f0000f25f0000
+    m_SelectedIDs: 5e630000
+    m_LastClickedID: 25438
+    m_ExpandedIDs: 00000000126300001463000016630000186300001a6300001c6300001e630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -497,7 +497,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da5f0000
+    m_ExpandedIDs: 00000000126300001463000016630000186300001a6300001c6300001e630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,9 +625,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 26abffff
-      m_LastClickedID: -21722
-      m_ExpandedIDs: b6a3ffffc0a3ffffcca3ffff72a6ffff7ca6ffff88a6ffffc0afffffeaf9fffff4f9ffff44faffff4efaffff68faffff22620000
+      m_SelectedIDs: b4daffff
+      m_LastClickedID: -9548
+      m_ExpandedIDs: 9edaffffa8daffffb4daffff98f2ffffa2f2ffffaef2ffff32f3ffff96faffffa0faffffacfaffffd6faffffe0faffffecfaffff0afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -898,9 +898,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.2694234, y: 1.6891088, z: -6.0822597}
+    m_Target: {x: 6.5963387, y: 1.6344734, z: -6.2698913}
     speed: 2
-    m_Value: {x: -0.2694234, y: 1.6891088, z: -6.0822597}
+    m_Value: {x: 6.5963387, y: 1.6344734, z: -6.2698913}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -951,9 +951,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.7709899
+    m_Target: 17.599686
     speed: 2
-    m_Value: 1.7709899
+    m_Value: 17.599686
   m_Ortho:
     m_Target: 1
     speed: 2
