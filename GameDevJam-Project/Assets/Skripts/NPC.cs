@@ -11,6 +11,7 @@ public GameObject dialogBox;
 public GameObject npcImage;
 private BoxCollider2D boxCollider;
 public bool playerInRange;
+private bool dialogOpen;
 
     protected virtual void Start()
     {
@@ -26,22 +27,18 @@ public bool playerInRange;
                 playerInRange = true;
                 Debug.Log("player in range");
                 
-                {
-                    //if (dialogBox.activeInHierarchy)
-                    //{
-                    //    dialogBox.SetActive(false);
-
-                   // }
-                   // else
-                   // {
-                        dialogBox.SetActive(true);
-                        dialogText.text = dialog;
-                   // }
-                }
             }
         }
     
-   
+   private void Update() {
+       if (playerInRange){
+               if (Input.GetKeyDown(KeyCode.E))
+            {
+                dialogBox.SetActive(true);
+                dialogText.text = dialog;
+            }
+       }
+   }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
