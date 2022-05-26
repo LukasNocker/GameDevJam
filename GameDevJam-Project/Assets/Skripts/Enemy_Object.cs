@@ -158,7 +158,7 @@ public class Enemy_Object : MonoBehaviour
         }
 
         Vector2 movedir = new(moveDelta.x, moveDelta.y);
-        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
+//        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
     }
     // All Enemies can receive damage / die
     // protected virtual void ReceiveDamage(Damage dmg)
