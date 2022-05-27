@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
+        //if(PauseMenu.isPaused)
     }
     // Ressources
   
