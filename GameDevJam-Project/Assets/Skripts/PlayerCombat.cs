@@ -14,9 +14,11 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
+        if(!PauseMenu.isPaused){
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Attack();
+        }
         }
     }
 
