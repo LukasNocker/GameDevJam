@@ -50,14 +50,14 @@ TagManager:
   - name: Background
     uniqueID: 211358817
     locked: 0
-  - name: Midground
-    uniqueID: 3265330133
-    locked: 0
   - name: Objects
     uniqueID: 644521661
     locked: 0
   - name: Characters
     uniqueID: 3577145661
+    locked: 0
+  - name: Midground
+    uniqueID: 3265330133
     locked: 0
   - name: UI
     uniqueID: 3056272183
