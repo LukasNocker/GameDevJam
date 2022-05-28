@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         }
 
         instance = this;
-        SceneManager.sceneLoaded += LoadState;
+        //SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
         //if(PauseMenu.isPaused)
     }
@@ -33,57 +33,44 @@ public class GameManager : MonoBehaviour
     public FloatingTextManager floatingTextManager;
 
     //Logic
-    public int souls;
-    public int experience;
+    public float souls;
+    public float maxSouls;
+
     
     //Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg,fontSize,color,position,motion,duration);
     }
-
-    //Save State
-    /*
-     * INT preferedSkin
-     * INT pesos
-     * INT experience
-     * INT weaponLevel
-     */
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            SaveState();
+        }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            LoadState();
+        }
+    }
     public void SaveState()
     {
-        string s = "";
 
-        s += "0" + "|";
-        s += souls.ToString() + "|";
-        s += experience.ToString() + "|";
-        s += "0";
-
-        PlayerPrefs.SetString("SaveState", s);
-
+        PlayerPrefs.SetString("SaveState", SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetFloat("Player_position_x", CharakterController.instance.transform.position.x);
+        PlayerPrefs.SetFloat("Player_position_y", CharakterController.instance.transform.position.y);
+        PlayerPrefs.SetFloat("Player_position_z", CharakterController.instance.transform.position.z);
+        PlayerPrefs.SetFloat("Player_Souls_Collected", souls);
         Debug.Log("SaveState");
 
     }
 
-    public void LoadState(Scene s, LoadSceneMode mode)
+    // public void LoadState(Scene s, LoadSceneMode mode)
+    public void LoadState()
     {
-        if (!PlayerPrefs.HasKey("SaveState"))
-            return;
-
-        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
-
-        //change player skin
-        souls = int.Parse(data[1]);
-        experience = int.Parse(data[2]);
-        //change the weapon Level 
-
-        Debug.Log("LoadState");
-    }
-
-    //Souls collecting [not working yet]
-
-    public void UpdateSoulDisplayUI()
-    {
-        ++souls;
+        SceneManager.LoadScene(PlayerPrefs.GetString("SaveState"));
+        CharakterController.instance.transform.position = new Vector3(PlayerPrefs.GetFloat("Player_position_x"),PlayerPrefs.GetFloat("Player_position_y"),PlayerPrefs.GetFloat("Player_position_z"));
+        souls = PlayerPrefs.GetFloat("Player_Souls_Collected");
 
     }
     public void PickupSoul()

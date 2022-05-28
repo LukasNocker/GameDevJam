@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class HealthSystem :  MonoBehaviour
 {
-    [SerializeField]
+    
     public float hitPoints;
-    [SerializeField]
     public float maxHitpoint;
 
     public GameObject SoulCollectable;

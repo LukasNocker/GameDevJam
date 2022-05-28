@@ -5,11 +5,21 @@ using UnityEngine;
 public class CharakterController : MonoBehaviour
 {
    private Rigidbody2D rb;
+   public static CharakterController instance;
 
     
    [SerializeField] private float moveSpeed = 1.0f;
 
-    
+    void Start() {
+        if(instance == null)
+        {
+        instance = this;
+        }
+        else{
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
     
 
     private void Awake()
