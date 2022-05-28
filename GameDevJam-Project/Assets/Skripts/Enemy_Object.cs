@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy_Object : MonoBehaviour
 {
-   
+  
 
     //Public Fields
     public int currentHealth;
@@ -159,8 +159,7 @@ public class Enemy_Object : MonoBehaviour
             hits[i] = null;
         }
 
-        Vector2 movedir = new(moveDelta.x, moveDelta.y);
-        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
+       
     }
     // All Enemies can receive damage / die
     // protected virtual void ReceiveDamage(Damage dmg)

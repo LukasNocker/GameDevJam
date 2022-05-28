@@ -25,23 +25,12 @@ public class CharakterController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
-      
-        
+       
     }
 
     
     private void FixedUpdate()
     {
-      
-
-        //old Movement
-        //moveH = Input.GetAxis("Horizontal") * moveSpeed;
-        // moveV = Input.GetAxis("Vertical") * moveSpeed;
-        // rb.velocity = new Vector2(moveH, moveV);
-        // Vector2 direction = new Vector2(moveH, moveV);
-
-       // fixed Movement
         Vector2 currentPos = rb.position;
 
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -58,9 +47,9 @@ public class CharakterController : MonoBehaviour
         Vector2 direction = new(horizontalInput, verticalInput);
 
 
-        
         FindObjectOfType<CharakterAnimation>().SetDirection(direction);
     }
+    
   
    
 }
