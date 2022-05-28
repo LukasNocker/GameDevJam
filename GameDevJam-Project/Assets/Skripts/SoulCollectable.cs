@@ -6,18 +6,18 @@ public class SoulCollectable : Collectable
 {
     public int soulsAmount = 1;
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player"))
-         {
-        Debug.Log("+" + soulsAmount + " Souls collected");
+        // if (collision.gameObject.CompareTag("Player"))
+        //  {
+        // Debug.Log("+" + soulsAmount + " Souls collected");
 
-        //Test if the Player has a manager attached, 
-        GameManager manager = collision.GetComponent<GameManager>();
-         if (manager)
-            {
-                manager.PickupSoul();
-            }
-        Destroy(this.gameObject);
-         }
+        // //Test if the Player has a manager attached, 
+        // GameManager manager = collision.GetComponent<GameManager>();
+        //  if (manager)
+        //     {
+        //         manager.PickupSoul();
+        //     }
+        // Destroy(this.gameObject);
+        //  }
          if (collision.gameObject.CompareTag("Companion"))
          {
           Debug.Log("+" + soulsAmount + " collected by Companion");
@@ -30,19 +30,5 @@ public class SoulCollectable : Collectable
             Destroy(this.gameObject);
          }
     }
-    // {
-    //     if (!collected)
-    //     {
-    //         collected = true;
-    //         Debug.Log("+" + soulsAmount + " Souls collected");
-    //         GameManager manager = GetComponent<GameManager>();
-    //         Destroy(this.gameObject);
-            
-    //         if (manager)
-    //         {
-    //             manager.PickupSoul();
-    //         }
-    //         //Verbindung zum Game Manager missing to really store the Souls
-    //     }
-    // }
+
 }

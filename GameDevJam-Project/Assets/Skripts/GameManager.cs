@@ -33,8 +33,9 @@ public class GameManager : MonoBehaviour
     public FloatingTextManager floatingTextManager;
 
     //Logic
-    public int souls;
-    public int experience;
+    public float souls;
+    public float maxSouls;
+
     
     //Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("Player_position_x", CharakterController.instance.transform.position.x);
         PlayerPrefs.SetFloat("Player_position_y", CharakterController.instance.transform.position.y);
         PlayerPrefs.SetFloat("Player_position_z", CharakterController.instance.transform.position.z);
-        PlayerPrefs.SetInt("Player_Souls_Collected", souls);
+        PlayerPrefs.SetFloat("Player_Souls_Collected", souls);
         Debug.Log("SaveState");
 
     }
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("SaveState"));
         CharakterController.instance.transform.position = new Vector3(PlayerPrefs.GetFloat("Player_position_x"),PlayerPrefs.GetFloat("Player_position_y"),PlayerPrefs.GetFloat("Player_position_z"));
-        souls = PlayerPrefs.GetInt("Player_Souls_Collected");
+        souls = PlayerPrefs.GetFloat("Player_Souls_Collected");
 
     }
     public void PickupSoul()
