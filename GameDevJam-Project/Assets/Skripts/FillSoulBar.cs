@@ -25,7 +25,13 @@ public class FillSoulBar : MonoBehaviour
         {
             fillImage.enabled = true;
         }
+        
         float fillValue = GameManager.instance.souls / GameManager.instance.maxSouls;
         slider.value = fillValue;
+
+        if(fillValue >= slider.maxValue)
+        {
+            fillImage.color = Color.yellow;
+        }
     }
 }
