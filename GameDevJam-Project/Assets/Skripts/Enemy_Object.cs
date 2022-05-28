@@ -7,10 +7,12 @@ public class Enemy_Object : MonoBehaviour
    
 
     //Public Fields
-    public int currentHealth;
-    public int experience = 10;
-    public int maxHealth = 10;
+    public float experience = 10;
     public float pushRecoverySpeed = 0.2f;
+    [SerializeField]
+    private float attackSpeed = 1f;
+    private float canAttack = 1f;
+    public float attackRange = 2f;
 
     //Immunity
     protected float immuneTime = 1.0f;
@@ -41,7 +43,7 @@ public class Enemy_Object : MonoBehaviour
     private Collider2D[] hits = new Collider2D[10];
 
     // Damage
-    public int damage = 1;
+    public float damage = 1;
     public float pushForce = 5;
 
     //push
@@ -53,14 +55,12 @@ public class Enemy_Object : MonoBehaviour
             capsuleCollider = GetComponent<CapsuleCollider2D>();
             playerTransform = GameObject.Find("Player").transform;
             startingPosition = transform.position;
-            currentHealth = maxHealth;
-        if (this.gameObject.transform.childCount > 0)
-        {
-            hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
+        // if (this.gameObject.transform.childCount > 0)
+        // {
+        //     hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
             
-        }
+        // }
     }
-
     
 
     //Enemy Moving
@@ -102,12 +102,8 @@ public class Enemy_Object : MonoBehaviour
             // make this thing move!
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
 
-        }
-
-        
-        
+        }  
     }
-
     //Chasing Mechanic
     private void FixedUpdate()
     {
@@ -159,49 +155,20 @@ public class Enemy_Object : MonoBehaviour
 
         Vector2 movedir = new(moveDelta.x, moveDelta.y);
 //        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
-    }
-    // All Enemies can receive damage / die
-    // protected virtual void ReceiveDamage(Damage dmg)
-    // {
-    //     if (Time.time - lastImmune > immuneTime)
-    //     {
-    //         lastImmune = Time.time;
-    //         currentHealth -= damage;
-    //         pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
-
-    //         GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.up * 25, 0.5f);
-    //         Debug.Log("new hitpoints:" + currentHealth + " left");
-
-    //         if (currentHealth <= 0)
-    //         {
-             
-    //             Death();
-    //         }
-    //     }
-    // }
-
-    //Deal Damage
-    protected void OnCollide(Collider2D coll)
-    {
-        if (coll.tag == "Player")
+        if(Vector2.Distance(transform.position,playerTransform.position) < attackRange)
         {
-
-            if (coll.name == "Player")
-            {
-                //Create a new Damage Object, then we'll send it to the fighter we've hit
-                Damage dmg = new Damage
-                {
-                    damageAmount = damage,
-                    origin = transform.position,
-                    pushForce = pushForce,
-                };
-
-                coll.SendMessage("ReceiveDamage", dmg);
-
-            }
+            if (attackSpeed <= canAttack){
+                HealthSystem healthSystem = GameObject.Find("Player").GetComponent<HealthSystem>();
+                healthSystem.Damage(damage);
+                canAttack = 0f;
+                Debug.Log("You received damage: " + damage);
+                }
+                else {
+                canAttack += Time.deltaTime;
+                }
         }
-    }
 
+    }
     protected virtual void Death()
     {
         Destroy(transform.root.gameObject);
