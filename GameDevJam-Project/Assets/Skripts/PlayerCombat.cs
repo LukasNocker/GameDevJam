@@ -15,10 +15,13 @@ public class PlayerCombat : MonoBehaviour
     private void Update()
     {
         if(!PauseMenu.isPaused){
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Attack();
-        }
+            if (!GameObject.Find("DialogBox"))
+            {
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                Attack();
+                }
+            }
         }
     }
 

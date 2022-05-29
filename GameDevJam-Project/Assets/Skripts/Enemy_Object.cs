@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Object : MonoBehaviour
-{
+{   
    
 
     //Public Fields
@@ -13,6 +13,7 @@ public class Enemy_Object : MonoBehaviour
     private float attackSpeed = 1f;
     private float canAttack = 1f;
     public float attackRange = 2f;
+    private GameObject dialogBox;
 
     //Immunity
     protected float immuneTime = 1.0f;
@@ -160,6 +161,11 @@ public class Enemy_Object : MonoBehaviour
             if (attackSpeed <= canAttack){
                 HealthSystem healthSystem = GameObject.Find("Player").GetComponent<HealthSystem>();
                 healthSystem.Damage(damage);
+                if (GameObject.Find("DialogBox"))
+                {
+                    dialogBox = GameObject.Find("DialogBox");
+                    dialogBox.SetActive(false);
+                }
                 canAttack = 0f;
                 Debug.Log("You received damage: " + damage);
                 }

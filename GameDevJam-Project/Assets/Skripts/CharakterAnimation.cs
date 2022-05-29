@@ -33,8 +33,7 @@ public class CharakterAnimation : MonoBehaviour
         currentPos = transform.position;
 
       
-
-
+if (!GameObject.Find("DialogBox")) {
            if (lastDirection == 0)
            {
                
@@ -133,8 +132,8 @@ public class CharakterAnimation : MonoBehaviour
            }
 
 
-       
     }
+}
     
     public void SetDirection (Vector2 _direction)
     {
