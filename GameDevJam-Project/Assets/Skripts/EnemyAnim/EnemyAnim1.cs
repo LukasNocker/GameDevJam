@@ -2,21 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimation : MonoBehaviour
+public class EnemyAnim1 : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
 
-    int lastDir;
 
+    int lastDirection;
 
     public string[] staticDirections = { "E_StaticN", "E_StaticNW", "E_StaticW", "E_StaticSW", "E_StaticS", "E_StaticSE", "E_StaticE", "E_StaticNE" };
-    public string[] runDirections = { "E_RunN", "E_RunNW", "E_RunW", "E_RunSW", "E_RunS", "E_RunSE", "E_RunE", "E_RunNE" };
+
 
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
+
     }
+
+
+
+
+
+
+
 
     public void SetDirection(Vector2 _direction)
     {
@@ -24,7 +31,7 @@ public class EnemyAnimation : MonoBehaviour
 
 
 
-        if (_direction.magnitude < 0.1)
+        if (_direction.magnitude < 0.01)
         {
             directonArray = staticDirections;
 
@@ -32,14 +39,20 @@ public class EnemyAnimation : MonoBehaviour
 
         else
         {
-            directonArray = runDirections;
+            directonArray = staticDirections;
 
 
-            lastDir = DirectionToIndex(_direction);
+            lastDirection = DirectionToIndex(_direction);
 
         }
 
-        anim.Play(directonArray[lastDir]);
+
+
+        lastDirection = DirectionToIndex(_direction);
+
+
+
+        anim.Play(directonArray[lastDirection]);
     }
 
     private int DirectionToIndex(Vector2 _direction)
