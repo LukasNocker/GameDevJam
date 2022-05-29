@@ -67,14 +67,12 @@ public class Enemy_Object : MonoBehaviour
 
     protected virtual void UpdateMotor(Vector3 input)
     {
+        
+
         // Reset MoveDelta
         moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
-        //Swap Sprite direction, wehter you're going right or left
-        if (moveDelta.x > 0)
-            transform.localScale = Vector3.one;
-        else if (moveDelta.x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+      
 
         //add push vector, if any
         moveDelta += pushDirection;
@@ -104,8 +102,7 @@ public class Enemy_Object : MonoBehaviour
 
         }
 
-        Vector2 movedir = new(moveDelta.x, moveDelta.y);
-        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
+       
 
 
     }
@@ -159,7 +156,9 @@ public class Enemy_Object : MonoBehaviour
             hits[i] = null;
         }
 
-       
+        Vector2 direction = new(moveDelta.x, moveDelta.y);
+        FindObjectOfType<EnemyAnimation>().SetDirection(direction);
+
     }
     // All Enemies can receive damage / die
     // protected virtual void ReceiveDamage(Damage dmg)

@@ -38,7 +38,8 @@ public class Companion : MonoBehaviour
        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
           }}
         
-}
+
+    }
     void CollectSoul(GameObject[] souls)
     {
          transform.position = Vector3.MoveTowards(transform.position, souls[0].transform.position, speed * Time.deltaTime);
