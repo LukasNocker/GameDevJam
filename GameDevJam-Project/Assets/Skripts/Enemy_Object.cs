@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Object : MonoBehaviour
-{
-  
+{   
+   
 
     //Public Fields
     public int currentHealth;
     public int experience = 10;
     public int maxHealth = 10;
     public float pushRecoverySpeed = 0.2f;
+    [SerializeField]
+    private float attackSpeed = 1f;
+    private float canAttack = 1f;
+    public float attackRange = 2f;
+    private GameObject dialogBox;
 
     //Immunity
     protected float immuneTime = 1.0f;
@@ -156,8 +161,25 @@ public class Enemy_Object : MonoBehaviour
             hits[i] = null;
         }
 
-        Vector2 direction = new(moveDelta.x, moveDelta.y);
-        FindObjectOfType<EnemyAnimation>().SetDirection(direction);
+        Vector2 movedir = new(moveDelta.x, moveDelta.y);
+//        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
+        if(Vector2.Distance(transform.position,playerTransform.position) < attackRange)
+        {
+            if (attackSpeed <= canAttack){
+                HealthSystem healthSystem = GameObject.Find("Player").GetComponent<HealthSystem>();
+                healthSystem.Damage(damage);
+                if (GameObject.Find("DialogBox"))
+                {
+                    dialogBox = GameObject.Find("DialogBox");
+                    dialogBox.SetActive(false);
+                }
+                canAttack = 0f;
+                Debug.Log("You received damage: " + damage);
+                }
+                else {
+                canAttack += Time.deltaTime;
+                }
+        }
 
     }
     // All Enemies can receive damage / die

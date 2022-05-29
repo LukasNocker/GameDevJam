@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour
 {
 public string dialog;
-public Text dialogText;
+public Dialogue dialogue; 
+//public Text dialogText;
 public GameObject dialogBox;
 public GameObject npcImage;
 private BoxCollider2D boxCollider;
+public DialogManager dialogManager;
 public bool playerInRange;
 private bool dialogOpen;
 
@@ -32,12 +34,16 @@ private bool dialogOpen;
     
    private void Update() {
        if (playerInRange){
-               if (Input.GetKeyDown(KeyCode.E))
+               if (Input.GetKeyDown(KeyCode.E)){
+               if (!GameObject.Find("DialogBox")) 
             {
                 dialogBox.SetActive(true);
-                dialogText.text = dialog;
-            }
+                //dialogText.text = dialog;
+                //FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+                dialogManager.StartDialogue(dialogue);
+            }    
        }
+   }
    }
     private void OnTriggerExit2D(Collider2D other)
     {
