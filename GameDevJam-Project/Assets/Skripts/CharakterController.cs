@@ -31,6 +31,7 @@ public class CharakterController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if (!GameObject.Find("DialogBox")) {
         Vector2 currentPos = rb.position;
 
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -48,6 +49,7 @@ public class CharakterController : MonoBehaviour
 
 
         FindObjectOfType<CharakterAnimation>().SetDirection(direction);
+        }
     }
     
   
