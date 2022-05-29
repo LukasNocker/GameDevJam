@@ -179,6 +179,10 @@ PrefabInstance:
       value: virtualCam
       objectReference: {fileID: 0}
     - target: {fileID: 5905312201265798736, guid: ea1ef88e6d6beaa45bc3ce6437eff2ca, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1364390473}
+    - target: {fileID: 5905312201265798736, guid: ea1ef88e6d6beaa45bc3ce6437eff2ca, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
       value: 2.0104895
       objectReference: {fileID: 0}
@@ -594,9 +598,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 21.182928, y: 10.588705}
-      - {x: -19.853844, y: 10.581901}
-      - {x: -19.832382, y: -6.6116567}
+    - - {x: 21.150974, y: 10.531186}
+      - {x: -19.81378, y: 10.53863}
+      - {x: -19.811403, y: -6.5966716}
       - {x: 21.186674, y: -6.6176214}
 --- !u!4 &712198510
 Transform:
@@ -611,8 +615,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1364390473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5501281616916115673, guid: 8fe8e9656cb6f8a46bea52772c852023, type: 3}
+  m_PrefabInstance: {fileID: 2063149463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1674113200
 GameObject:
   m_ObjectHideFlags: 0

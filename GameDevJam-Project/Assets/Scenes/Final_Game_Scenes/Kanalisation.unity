@@ -1056,11 +1056,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2346824527319923439, guid: 4860155f2648629468c266c0fda0b114, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8387036
+      value: 3.8374617
       objectReference: {fileID: 0}
     - target: {fileID: 2346824527319923439, guid: 4860155f2648629468c266c0fda0b114, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.8203998
+      value: -4.79742
       objectReference: {fileID: 0}
     - target: {fileID: 2346824527319923439, guid: 4860155f2648629468c266c0fda0b114, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1204,8 +1204,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -18.313534, y: 12.071301}
-      - {x: -18.320498, y: -9.556952}
-      - {x: 20.082386, y: -9.548596}
+      - {x: -18.320498, y: -9.537216}
+      - {x: 20.082386, y: -9.523465}
       - {x: 20.061232, y: 12.122505}
 --- !u!4 &1710952327
 Transform:
@@ -1220,7 +1220,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2019530020 stripped
 Transform:
