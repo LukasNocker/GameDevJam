@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public List<int> xpTable;
 
     //References
-    public Player player;
+  //public Player player;
 
     //public floating text
     public FloatingTextManager floatingTextManager;

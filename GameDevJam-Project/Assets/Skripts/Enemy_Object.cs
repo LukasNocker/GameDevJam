@@ -211,14 +211,14 @@ public class Enemy_Object : MonoBehaviour
             if (coll.name == "Player")
             {
                 //Create a new Damage Object, then we'll send it to the fighter we've hit
-                Damage dmg = new Damage
+              //Damage dmg = new Damage
                 {
-                    damageAmount = damage,
-                    origin = transform.position,
-                    pushForce = pushForce,
+              //    damageAmount = damage,
+              //    origin = transform.position,
+              //    pushForce = pushForce,
                 };
 
-                coll.SendMessage("ReceiveDamage", dmg);
+              //coll.SendMessage("ReceiveDamage", dmg);
 
             }
         }
