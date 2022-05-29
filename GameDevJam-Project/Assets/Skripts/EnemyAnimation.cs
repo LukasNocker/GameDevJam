@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAnimation : MonoBehaviour
 {
 
-    private Animator anim;
+    public Animator anim;
     
     int lastDirection;
 
@@ -15,7 +15,7 @@ public class EnemyAnimation : MonoBehaviour
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
+        
     }
 
    

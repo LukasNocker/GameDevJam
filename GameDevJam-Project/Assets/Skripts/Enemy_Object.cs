@@ -157,7 +157,8 @@ public class Enemy_Object : MonoBehaviour
         }
 
         Vector2 movedir = new(moveDelta.x, moveDelta.y);
-       FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
+        FindObjectOfType<EnemyAnimation>().SetDirection(movedir);
+        
         if(Vector2.Distance(transform.position,playerTransform.position) < attackRange)
         {
             if (attackSpeed <= canAttack){
