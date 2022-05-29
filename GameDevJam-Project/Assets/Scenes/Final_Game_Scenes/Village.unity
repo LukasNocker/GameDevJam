@@ -130,13 +130,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 622121763761761342, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1272005761}
+    - target: {fileID: 622121763761761342, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489315083746306897, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_Text
+      value: Bauer Frank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489315083746306897, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489315083746306897, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489315083746306897, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8702254108347444208, guid: c7a0111a118c29542be2d797083a574e, type: 3}
       propertyPath: m_Name
       value: NPC_talking
       objectReference: {fileID: 0}
     - target: {fileID: 8702254108347444218, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_Size.x
+      value: 3.291944
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444218, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_Size.y
+      value: 3.1423998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444218, guid: c7a0111a118c29542be2d797083a574e, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444218, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0071253777
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444218, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.9502258
       objectReference: {fileID: 0}
     - target: {fileID: 8702254108347444218, guid: c7a0111a118c29542be2d797083a574e, type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
@@ -161,6 +201,31 @@ PrefabInstance:
     - target: {fileID: 8702254108347444218, guid: c7a0111a118c29542be2d797083a574e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444219, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: dialogue.npcName
+      value: Bauer Frank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444219, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Hey du da!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444219, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Du siehst verloren aus, wenn du mir hilfst den Karren aus dem Schlamm
+        zu ziehen, nehme ich dich mit in die n\xE4chste Stadt"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444219, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Danke Junge! Dann mal los Auf 3! 1....2....3 *grrrnmpf*
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444219, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702254108347444219, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8702254108347444220, guid: c7a0111a118c29542be2d797083a574e, type: 3}
       propertyPath: m_RootOrder
@@ -260,12 +325,16 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e0716d04b74f8c74a991b66ed6e444de, type: 3}
     - target: {fileID: 8702254108347444223, guid: c7a0111a118c29542be2d797083a574e, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8702254108347444223, guid: c7a0111a118c29542be2d797083a574e, type: 3}
       propertyPath: m_SortingLayerID
-      value: 644521661
+      value: -717821635
       objectReference: {fileID: 0}
+    - target: {fileID: 8702254108483040761, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0716d04b74f8c74a991b66ed6e444de, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7a0111a118c29542be2d797083a574e, type: 3}
 --- !u!1 &376035774
@@ -531,6 +600,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe8e9656cb6f8a46bea52772c852023, type: 3}
+--- !u!114 &1272005761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2895014094371948639, guid: c7a0111a118c29542be2d797083a574e, type: 3}
+  m_PrefabInstance: {fileID: 15977702}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77421494f94f25f4f8f8436609e6a6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1304074348
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,11 +942,11 @@ PolygonCollider2D:
       - {x: 15.2784, y: 4.0428343}
       - {x: 14.908486, y: 3.0768285}
       - {x: 14.56849, y: 1.5910085}
-      - {x: 16.454914, y: 1.1288239}
-      - {x: 17.397295, y: 0.8392419}
-      - {x: 18.403893, y: -0.061335288}
-      - {x: 18.09583, y: -1.0538428}
-      - {x: 17.212631, y: -1.8821096}
+      - {x: 15.053699, y: 1.0439018}
+      - {x: 15.401626, y: 0.3721699}
+      - {x: 15.49531, y: -0.42225417}
+      - {x: 15.569397, y: -1.5421449}
+      - {x: 15.620341, y: -2.1581068}
       - {x: 15.69174, y: -2.8229399}
       - {x: 15.69664, y: -3.3753147}
       - {x: 18.26538, y: -5.0150847}
