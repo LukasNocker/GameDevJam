@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnim1 : MonoBehaviour
+public class EnemyAnimation : MonoBehaviour
 {
-    public Animator anim;
 
-
+    private Animator anim;
+    
     int lastDirection;
 
     public string[] staticDirections = { "E_StaticN", "E_StaticNW", "E_StaticW", "E_StaticSW", "E_StaticS", "E_StaticSE", "E_StaticE", "E_StaticNE" };
-
+    
 
 
     private void Awake()
     {
-
+        anim = GetComponent<Animator>();
     }
 
-
+   
 
 
 
@@ -39,7 +39,7 @@ public class EnemyAnim1 : MonoBehaviour
 
         else
         {
-            directonArray = staticDirections;
+            directonArray = staticDirections ;
 
 
             lastDirection = DirectionToIndex(_direction);
@@ -50,7 +50,7 @@ public class EnemyAnim1 : MonoBehaviour
 
         lastDirection = DirectionToIndex(_direction);
 
-
+        
 
         anim.Play(directonArray[lastDirection]);
     }
