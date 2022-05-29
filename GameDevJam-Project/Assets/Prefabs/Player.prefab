@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2253752147749118713}
   - component: {fileID: 2253752147749118714}
   - component: {fileID: 2253752147749118715}
+  - component: {fileID: -5812898453857925611}
+  - component: {fileID: -438329925404567333}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -79,7 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -717821635
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a145292f4c4b2dd4890d59e858deb8f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -223,6 +225,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5812898453857925611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298444584075748116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8daa9d4702dca74da0d1b9f0f24a063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoulTable: 
+  xpTable: 
+  floatingTextManager: {fileID: 0}
+  souls: 0
+  maxSouls: 20
+--- !u!114 &-438329925404567333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298444584075748116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32127bee85c45a4f89f85fbee650c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 50
+  maxHitpoint: 50
+  SoulCollectable: {fileID: 0}
 --- !u!1 &4611279837012011955
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +328,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -717821635
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5632405, g: 0.20784311, b: 0.9254902, a: 0}
