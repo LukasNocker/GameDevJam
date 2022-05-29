@@ -12,17 +12,7 @@ public class EnemyAnimation : MonoBehaviour
     public string[] staticDirections = { "E_StaticN", "E_StaticNW", "E_StaticW", "E_StaticSW", "E_StaticS", "E_StaticSE", "E_StaticE", "E_StaticNE" };
     
 
-
-    private void Awake()
-    {
-        
-    }
-
-   
-
-
-
-
+  
 
 
     public void SetDirection(Vector2 _direction)
