@@ -17,11 +17,13 @@ public class HealthSystem :  MonoBehaviour
         return hitPoints;
     }
 
+   
     public void Damage(float damageAmount) {
         hitPoints -= damageAmount;
         if (hitPoints < 0 ) 
         {hitPoints = 0;
-        Destroy(gameObject);
+          
+         Destroy(gameObject);
         // this can be handled in a different class:
         if (gameObject.CompareTag("Enemy"))
         {

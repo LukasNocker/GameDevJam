@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Object : MonoBehaviour
-{   
-   
+{
+    
 
     //Public Fields
  
@@ -114,7 +114,7 @@ public class Enemy_Object : MonoBehaviour
     //Chasing Mechanic
     private void FixedUpdate()
     {
-       
+        
 
         //is the player in range?
         if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
@@ -168,6 +168,8 @@ public class Enemy_Object : MonoBehaviour
             if (attackSpeed <= canAttack){
                 HealthSystem healthSystem = GameObject.Find("Player").GetComponent<HealthSystem>();
                 healthSystem.Damage(damage);
+               
+
                 if (GameObject.Find("DialogBox"))
                 {
                     dialogBox = GameObject.Find("DialogBox");
@@ -175,18 +177,19 @@ public class Enemy_Object : MonoBehaviour
                 }
                 canAttack = 0f;
                 Debug.Log("You received damage: " + damage);
-                }
+            }
                 else {
                 canAttack += Time.deltaTime;
                 }
         }
 
-    }
+    }        
 
     protected virtual void Death()
     {
+        
         Destroy(transform.root.gameObject);
-        Instantiate(SoulCollectable, transform.position, Quaternion.identity);
+        
         Debug.Log("enemy died");
     }
 }

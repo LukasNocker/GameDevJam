@@ -10,7 +10,7 @@ public class PlayerCombat : MonoBehaviour
 
     public int attackDamage = 4;
 
-    
+    public ParticleSystem  blood;
 
     private void Update()
     {
@@ -19,10 +19,12 @@ public class PlayerCombat : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                Attack();
+                  Attack();
                 }
             }
         }
+
+        blood.transform.position = attackPoint.position;
     }
 
    void Attack()
@@ -35,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("We hit" + enemy.name);
+            blood.Play();
             HealthSystem healthSystem =  enemy.GetComponent<HealthSystem>();
             healthSystem.Damage(1);
 
