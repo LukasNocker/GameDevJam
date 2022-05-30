@@ -56,7 +56,7 @@ public class Companion : MonoBehaviour
 
         moveDelta = new Vector3(transform.position.x * speed, transform.position.y * speed, 0);
         Vector2 compDir = new(moveDelta.x, moveDelta.y);
-     FindObjectOfType<CompAnim>().SetDirection(compDir);
+        //FindObjectOfType<CompAnim>().SetDirection(compDir);
 
     }
     void CollectSoul(GameObject[] souls)
