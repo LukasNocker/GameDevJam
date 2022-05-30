@@ -15,26 +15,28 @@ public class Timer : MonoBehaviour
     }
 
     // Update is called once per frame
-    
-    void Update()
-    {
-        if (inOverworld)
-        {
-            currentTime -= 1 * Time.deltaTime;
-            GameManager.instance.souls = currentTime;
-            if (currentTime == 0)
-            {
-                inOverworld = false;
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Ghetto_2");
-            }
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player"))
         {
             inOverworld = true;
+            StartCoroutine(CountdownToStart());
         }
     }
+
+    IEnumerator CountdownToStart()
+{
+    while (currentTime > 0)
+    {
+        yield return new WaitForSeconds(1f);
+        currentTime--;
+        GameManager.instance.souls = currentTime;
+        if (currentTime == 0)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Ghetto_2");
+                inOverworld = false;
+            }
+    }
+}
 }
 
