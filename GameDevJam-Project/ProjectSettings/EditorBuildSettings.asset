@@ -8,7 +8,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: bdd30cf6d92f7c44e998db9cfa4f8fba
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FirstScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/Ghetto.unity
+    guid: 8cf17699d17df8f4c9b3acac4cbe8c46
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/UW_City.unity
+    guid: d99c262581cfa2e4d96f131b9f19e47a
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/HuntingGround0.unity
+    guid: 357101730c1344e408acafef40e178d5
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/HuntingGround1.unity
+    guid: 87ca60035c557514987caef28f51bade
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/HuntingGround2.unity
+    guid: a523bfdcccef22e4692718c37970f3f8
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/Village.unity
+    guid: 57bf8ed105551bd49a285ff2cfb1dfbf
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/Schloss_Eingang.unity
+    guid: 9b7ec9a1f3207ee41b32c591ff7274ac
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/OW_City.unity
+    guid: cb4b5ee5499ba224e9f216d97ce9a72a
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/Kanalisation.unity
+    guid: 3b9826eeae697034ea3dc95a4fd5c3d8
   m_configObjects: {}
