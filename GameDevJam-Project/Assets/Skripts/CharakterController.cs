@@ -51,6 +51,7 @@ public class CharakterController : MonoBehaviour
 
 
         FindObjectOfType<CharakterAnimation>().SetDirection(direction);
+          FindObjectOfType<CompAnim>().SetDirection(direction);
         }
     }
     
