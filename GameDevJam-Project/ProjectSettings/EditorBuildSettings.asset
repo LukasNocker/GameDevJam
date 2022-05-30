@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Final_Game_Scenes/Ghetto.unity
     guid: 8cf17699d17df8f4c9b3acac4cbe8c46
   - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/Ghetto_2.unity
+    guid: 0ac6dd1b5908ea34cba0f08a101f5101
+  - enabled: 1
     path: Assets/Scenes/Final_Game_Scenes/UW_City.unity
     guid: d99c262581cfa2e4d96f131b9f19e47a
   - enabled: 1
@@ -56,4 +59,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final_Game_Scenes/Controls.unity
     guid: 9db6f6deed60232438a083cc29b2e8ac
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/UW_City_1.unity
+    guid: 1c897d6d927b46044bf31b1777b7de34
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/UW_City_3.unity
+    guid: 052f1a1ce61e48f46b477378a39502dd
   m_configObjects: {}
