@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
   public void PlayGame()
   {
-      SceneManager.LoadScene("FirstScene");
+      SceneManager.LoadScene("Intro");
 
   }
   public void QuitGame()
@@ -19,4 +19,15 @@ public class MainMenu : MonoBehaviour
   {
     GameManager.instance.LoadState();
   }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+
+    }
+    public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
+
+    }
 }

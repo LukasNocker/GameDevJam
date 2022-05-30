@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Final_Game_Scenes/MainMenu.unity
     guid: bdd30cf6d92f7c44e998db9cfa4f8fba
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/StartMenu.unity
+    guid: f827aac2d34f8b64abb27db5907ea0e1
   - enabled: 1
     path: Assets/Scenes/Final_Game_Scenes/Intro.unity
     guid: c6b32a825e6747443a91ea0a9edfcc7c
@@ -50,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final_Game_Scenes/Credits.unity
     guid: f725ee8e2ae409b4299ca822cc055802
+  - enabled: 1
+    path: Assets/Scenes/Final_Game_Scenes/Controls.unity
+    guid: 9db6f6deed60232438a083cc29b2e8ac
   m_configObjects: {}

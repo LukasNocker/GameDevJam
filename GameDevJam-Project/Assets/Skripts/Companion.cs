@@ -5,6 +5,8 @@ using UnityEngine;
 public class Companion : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static Companion instance;
+
     private Transform target;
     private GameObject[] souls;
     public float speed = 5;
@@ -16,6 +18,15 @@ public class Companion : MonoBehaviour
     private Vector2 movey;
 
     void Start() {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
         target = GameObject.Find("Player").transform;
         souls = new GameObject[]{};
         
