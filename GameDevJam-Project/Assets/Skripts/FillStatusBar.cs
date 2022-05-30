@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class FillStatusBar : MonoBehaviour
 {
-    public HealthSystem HealthSystem;
     public Image fillImage;
     private Slider slider;
 
@@ -26,7 +25,7 @@ public class FillStatusBar : MonoBehaviour
         {
             fillImage.enabled = true;
         }
-        float fillValue = HealthSystem.hitPoints / HealthSystem.maxHitpoint;
+        float fillValue = GameManager.instance.currentHealth / GameManager.instance.maxHealth;
         slider.value = fillValue;
     }
 }
