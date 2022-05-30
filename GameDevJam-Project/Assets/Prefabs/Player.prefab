@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a98ab63caeff44ba1c1e168228182f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  areaTransitionName: placeholder
   moveSpeed: 5
 --- !u!70 &2253752147749118712
 CapsuleCollider2D:
@@ -162,6 +163,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   attackDamage: 4
+  blood: {fileID: 8792775333972136490, guid: 819d42fccc311d44aa8025669abc58e0, type: 3}
 --- !u!114 &2253752147749118714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +244,8 @@ MonoBehaviour:
   floatingTextManager: {fileID: 0}
   souls: 0
   maxSouls: 20
+  currentHealth: 100
+  maxHealth: 100
 --- !u!114 &-438329925404567333
 MonoBehaviour:
   m_ObjectHideFlags: 0
