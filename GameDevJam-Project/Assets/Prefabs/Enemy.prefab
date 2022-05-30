@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f356d95880a7a4b91f79446e67ef0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 933388230}
   staticDirections:
   - E_StaticN
   - E_StaticNW
