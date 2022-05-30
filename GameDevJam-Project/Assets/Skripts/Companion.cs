@@ -11,7 +11,9 @@ public class Companion : MonoBehaviour
     public float stoppingDistance;
     private bool soulExists;
 
-    private Vector2 moveDelta;
+    private Vector3 moveDelta;
+    private Vector2 movex;
+    private Vector2 movey;
 
     void Start() {
         target = GameObject.Find("Player").transform;
@@ -39,9 +41,11 @@ public class Companion : MonoBehaviour
        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
           }}
 
-        moveDelta = new Vector2(transform.position.x * speed, transform.position.y * speed);
+
+
+        moveDelta = new Vector3(transform.position.x * speed, transform.position.y * speed, 0);
         Vector2 compDir = new(moveDelta.x, moveDelta.y);
-        FindObjectOfType<CompAnim>().SetDirection(compDir);
+     FindObjectOfType<CompAnim>().SetDirection(compDir);
 
     }
     void CollectSoul(GameObject[] souls)
