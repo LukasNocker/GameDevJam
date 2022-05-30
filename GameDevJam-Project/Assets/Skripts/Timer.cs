@@ -18,7 +18,9 @@ public class Timer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player"))
+            
         {
+            currentTime = GameManager.instance.souls;
             inOverworld = true;
             StartCoroutine(CountdownToStart());
         }
