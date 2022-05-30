@@ -70,7 +70,11 @@ public class Enemy_Object : MonoBehaviour
 
     protected virtual void UpdateMotor(Vector3 input)
     {
-        
+        //Swap Sprite direction, wehter you're going right or left
+        if (moveDelta.x > 0)
+            transform.localScale = Vector3.one;
+        else if (moveDelta.x < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
 
         // Reset MoveDelta
         moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
