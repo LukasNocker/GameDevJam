@@ -7,6 +7,8 @@ public class CharakterController : MonoBehaviour
    private Rigidbody2D rb;
    public static CharakterController instance;
 
+   public string areaTransitionName = "placeholder";
+
     
    [SerializeField] private float moveSpeed = 1.0f;
 

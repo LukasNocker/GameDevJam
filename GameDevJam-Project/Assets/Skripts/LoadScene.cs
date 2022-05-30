@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadScene : MonoBehaviour
 {
     public string sceneNames;
+    public string areaTransitionName;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,6 +15,7 @@ public class LoadScene : MonoBehaviour
             GameManager.instance.SaveState();
             string sceneName = sceneNames;
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+            CharakterController.instance.areaTransitionName = areaTransitionName;
         }
     }
 }
