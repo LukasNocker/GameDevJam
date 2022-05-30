@@ -6,13 +6,16 @@ public class Timer : MonoBehaviour
 {
     public float currentTime;
     private bool inOverworld;
+    private BoxCollider2D boxCollider;
     // Start is called before the first frame update
     void Start()
     {
+        boxCollider = GetComponent<BoxCollider2D>();
         inOverworld = false;
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         if (inOverworld)
@@ -27,8 +30,11 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public void StartTimer()
-    {
-        inOverworld = true;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Player"))
+        {
+            inOverworld = true;
+        }
     }
 }
+
