@@ -186,9 +186,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera_All_in_One
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 3167105931857986604, guid: 565fb889d35256141b7681b2aa3d0c0c, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
       value: 19.847652
+=======
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9bee87e59bf5144e9b62fa4b562ab3d, type: 3}
+--- !u!1 &484334809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5769424396923673992, guid: e9bee87e59bf5144e9b62fa4b562ab3d, type: 3}
+  m_PrefabInstance: {fileID: 484334808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &484334810
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484334809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6591320aa53a51498f8d8e7e645b415, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &664117724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2298444584075748116, guid: 8fe8e9656cb6f8a46bea52772c852023, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501281616916115673, guid: 8fe8e9656cb6f8a46bea52772c852023, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3167105931857986604, guid: 565fb889d35256141b7681b2aa3d0c0c, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
@@ -249,7 +293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6384412671538627393, guid: af644eaf338f08846b1e335971352cbe, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: 13
+=======
+      value: -7.1090713
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6384412671538627393, guid: af644eaf338f08846b1e335971352cbe, type: 3}
       propertyPath: m_LocalPosition.y
