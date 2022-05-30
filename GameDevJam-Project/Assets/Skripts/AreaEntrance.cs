@@ -13,6 +13,7 @@ public class AreaEntrance : MonoBehaviour
         if (transitionName == CharakterController.instance.areaTransitionName)
         {
             CharakterController.instance.transform.position = transform.position;
+            Companion.instance.transform.position = transform.position;
         }
         }
     }
