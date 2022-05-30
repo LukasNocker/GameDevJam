@@ -1087,7 +1087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6384412671538627405, guid: af644eaf338f08846b1e335971352cbe, type: 3}
       propertyPath: m_Name
-      value: NPC_talking
+      value: NPC_Brunnen
       objectReference: {fileID: 0}
     - target: {fileID: 6384412671679864132, guid: af644eaf338f08846b1e335971352cbe, type: 3}
       propertyPath: m_Type
