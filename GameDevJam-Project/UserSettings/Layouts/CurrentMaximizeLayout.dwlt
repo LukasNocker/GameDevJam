@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a54ffff
-      m_LastClickedID: -43910
-      m_ExpandedIDs: ccc9ffff58faffff10fbffff
+      m_SelectedIDs: 6619ffff
+      m_LastClickedID: -59034
+      m_ExpandedIDs: bcc8ffffccc9ffff58faffff10fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 1039
     height: 615
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 173}
+    scrollPos: {x: 0, y: 157}
     m_SelectedIDs: 1c660000
     m_LastClickedID: 26140
     m_ExpandedIDs: 00000000be650000c0650000c2650000c4650000c6650000c8650000ca650000cc650000ce650000d0650000d2650000d4650000d6650000d8650000da650000dc650000de65000000ca9a3b
@@ -771,9 +771,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7a54ffff
-    m_LastClickedInstanceID: -43910
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 6619ffff
+    m_LastClickedInstanceID: -59034
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1015,9 +1015,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6048ebc3eccd64c408e73df89a961e1d, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: fb124e3c61e108545807d32707636d25, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 8953092090857347090, guid: 6048ebc3eccd64c408e73df89a961e1d, type: 2}
+  - m_Target: {fileID: -2965181773714793905, guid: fb124e3c61e108545807d32707636d25, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1060,7 +1060,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -13916
+  m_LastSelectedObjectID: -13900
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1122,7 +1122,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 162
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

@@ -5,14 +5,26 @@ using UnityEngine;
 public class Companion : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static Companion instance;
+
     private Transform target;
     private GameObject[] souls;
     public float speed = 5;
     public float stoppingDistance;
     private bool soulExists;
-    
+
+    private Vector2 moveDelta;
 
     void Start() {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
         target = GameObject.Find("Player").transform;
         souls = new GameObject[]{};
         
@@ -37,7 +49,10 @@ public class Companion : MonoBehaviour
         {
        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
           }}
-        
+
+        moveDelta = new Vector2(transform.position.x * speed, transform.position.y * speed);
+        Vector2 compDir = new(moveDelta.x, moveDelta.y);
+        FindObjectOfType<CompAnim>().SetDirection(compDir);
 
     }
     void CollectSoul(GameObject[] souls)
@@ -46,6 +61,8 @@ public class Companion : MonoBehaviour
          Debug.Log("found a Soul");
          
     }
+
+   
 }
 
 
