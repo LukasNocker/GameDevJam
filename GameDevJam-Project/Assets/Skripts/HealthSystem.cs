@@ -19,6 +19,10 @@ public class HealthSystem :  MonoBehaviour
 
     public void Damage(float damageAmount) {
         hitPoints -= damageAmount;
+        if (GameManager.instance)
+        {
+            GameManager.instance.Health();
+        }
         if (hitPoints < 0 ) 
         {hitPoints = 0;
         Destroy(gameObject);

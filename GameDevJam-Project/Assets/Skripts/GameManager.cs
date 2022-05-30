@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     public float souls;
     public float maxSouls;
 
+    public float currentHealth;
+    public float maxHealth;
     
     //Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -72,6 +74,11 @@ public class GameManager : MonoBehaviour
         CharakterController.instance.transform.position = new Vector3(PlayerPrefs.GetFloat("Player_position_x"),PlayerPrefs.GetFloat("Player_position_y"),PlayerPrefs.GetFloat("Player_position_z"));
         souls = PlayerPrefs.GetFloat("Player_Souls_Collected");
 
+    }
+    public void Health()
+    {   HealthSystem healthSystem = GameObject.Find("Player").GetComponent<HealthSystem>();
+        currentHealth = healthSystem.hitPoints;
+        maxHealth = healthSystem.maxHitpoint;
     }
     public void PickupSoul()
       {
