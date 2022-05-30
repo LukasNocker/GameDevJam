@@ -12,6 +12,7 @@ public class FillStatusBar : MonoBehaviour
     // Start is called before the first frame update
     void Awake() {
         slider = GetComponent<Slider>();
+        
     }
 
     // Update is called once per frame
